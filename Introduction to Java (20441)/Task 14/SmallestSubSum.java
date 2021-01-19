@@ -1,6 +1,5 @@
 public class SmallestSubSum{
       /**
-     * Question #2
      * This method gets an array and a number, and finds the smallest sub array 
      * that its sum is bigger than the received number.
      * Example:
