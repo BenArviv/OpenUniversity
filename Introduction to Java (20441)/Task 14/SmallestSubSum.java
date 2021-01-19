@@ -3,6 +3,9 @@ public class SmallestSubSum{
      * Question #2
      * This method gets an array and a number, and finds the smallest sub array 
      * that its sum is bigger than the received number.
+     * Example:
+     * array: {1, 2, 4, 3, 5}, number: 6
+     * smallestSubSum: {3, 5}
      * Time complexity: O(n), Space complexity: O(1)
      * @param arr An array of integers
      * @param x The number to compare the sum with
