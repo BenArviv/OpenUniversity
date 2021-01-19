@@ -1,6 +1,6 @@
 public class FindSingle{
 /**
-     * This method gets an array that includes couples of number and one single number,
+     * This method gets an array that includes couples of numbers and one single number,
      * and finds the single number.
      * Example:
      * array: {1, 1, 2, 2, 3, 4, 4, 5, 5, 6, 6}
