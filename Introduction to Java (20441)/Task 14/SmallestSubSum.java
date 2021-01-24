@@ -20,7 +20,7 @@ public class SmallestSubSum{
         }
         int i = 0, j = 1, sum = arr[i], tempCount = 0, finalCount = arr.length; // space: O(1)
         while (i < arr.length){ // complexity: O(n)
-            if (arr[i] > x) // enters if a number in the array is bigger then received value
+            if (arr[i] > x) // enters if a number in the array is bigger than received value
                 return 1;
             sum += arr[j];
             if (sum <= x && j + 1 != arr.length)
