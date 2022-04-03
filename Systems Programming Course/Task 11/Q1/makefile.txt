@@ -1,0 +1,4 @@
+Question_1: my_scalar.o
+	gcc -ansi -Wall -pedantic my_scalar.o -o 'Question_1'
+my_scalar.o: my_scalar.c
+	gcc -c -ansi -Wall -pedantic my_scalar.c -o my_scalar.o
