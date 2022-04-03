@@ -1,5 +1,5 @@
 <b>Task no. 14 for the university. <br>
-Shortly, in this folder there are four algorithms: findSingle(), smallestSubSum(), solutions() and cntTruereg().</b>
+Shortly, in this folder there are four algorithms: findSingle(), smallestSubSum(), solutions() and cntTrueReg().</b>
 
 <b><i>findSingle()</i></b> gets an array full of couples of numbers and one single number, finds that single and returns it.
 
