@@ -60,7 +60,7 @@ void printchars(char *p, int *cnt, int *cntan){
     for (i = 0; i < *cnt; i ++){
         putchar(p[i]);
         characters++;
-        if (characters == LIM || p[i] == '\n'9){
+        if (characters == LIM || p[i] == '\n'){
             characters = 0;
             printf("\n");
         }
