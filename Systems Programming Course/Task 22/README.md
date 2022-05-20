@@ -10,6 +10,7 @@ This mini project is a matrix calculator implementation, includes the following:
 * <i><b>trans_mat</i></b> function: gets two matrices, transposes the first matrix and assigns the result to the second matrix.
 * <i><b>print_mat</b></i> function: gets a matrix and prints it properly.
 <br><br>
+
 The program initialy defines <i>six</i> new matrices, {MAT_A, ..., MAT_F}, and gets the commands via the standard input, according to the pattern: <br>
 <i>func_name MAT_NAME, arguments... </i><br>
 for example: <br>
