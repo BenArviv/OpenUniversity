@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /*
 Class: Temperature
-Description: A temperature converter for Clecius, Fahrenheit and Kelvin units
+Description: A temperature converter for Celcius, Fahrenheit and Kelvin units
 @Author: Ben Arviv
 Date: 02/10/2020
 */
