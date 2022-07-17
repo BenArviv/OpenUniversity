@@ -36,7 +36,7 @@ An example of input and output files can be found under the 'tests' folder.
 - Uses signed *2's complement* arithmetic for integers (with no support for real numbers).
 
    ### Registers
-   The CPU has 9 registers: 8 general registers (named r1,r2,...,r8) and a register called *PSW* (program status word).  
+   The CPU has 9 registers: 8 general registers (named r0,r1,...,r7) and a register called *PSW* (program status word).  
    The size of each register is a *word* (10 bits).  
 
 ## Instruction Structure
@@ -100,11 +100,11 @@ The commands allowed in bits 6-9 are:
 |	8	|	dec	|
 |	9	|	jmp	|
 |	10	|	bne	|
-|	11	|	red	|
+|	11	|	get	|
 |	12	|	prn	|
 |	13	|	jsr	|
 |	14	|	rts	|
-|	15	|	stop	|
+|	15	|	hlt	|
 
 ## Directives
 A **_directive_** line of the following structure:
