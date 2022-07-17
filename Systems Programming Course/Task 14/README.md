@@ -4,9 +4,10 @@ The final assignment (#14) of the C course (20465) at The Open University.
 This project is based on the **_two-pass assembler_** model.  
 **Note:** the computer model for this project and the given assembly language are **imaginary**.
 
-## Getting Started
+## Authors
 
-The project was coded and compiled using Ubuntu, but it may run on all Linux versions.
+- Ben Arviv 
+- Gal Israel
 
 ### Usage
 
