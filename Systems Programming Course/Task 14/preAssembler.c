@@ -37,20 +37,20 @@ int macroOperation(char line[])
 /*Pushes macro name in to node*/
 void pushMacroName(struct Macro *temp, char line[]) 
 {
-    int index = 0, nindex = 0;
+    int i = 0, nameIndex = 0;
     char name[MAX];
     memset(name, '\0', MAX);
-    while (isspace(line[index]))
-        index++;
-    while (!isspace(line[index]) && line[index] != '\n')
-        index++;
-    while (isspace(line[index]))
-        index++;
-    while (!isspace(line[index]) && line[index] != '\n')
+    while (isspace(line[i]))
+        i++;
+    while (!isspace(line[i]) && line[i] != '\n')
+        i++;
+    while (isspace(line[i]))
+        i++;
+    while (!isspace(line[i]) && line[i] != '\n')
     {
-        name[nindex] = line[index];
-        nindex++;
-        index++;
+        name[nameIndex] = line[i];
+        nameIndex++;
+        i++;
     }
     strcpy(temp->mname, name);
 }
@@ -68,11 +68,10 @@ void pushMacroContent(struct Macro *temp, FILE *fp)
     strcpy(temp->mcontent, content);
 }
 
-/*Performing the first pass on the file (inserting the macros into the macro table, copying the corresponding rows from the table to the file, etc.)*/
+/*Performing the first pass on the file (inserting the macros into a linkedlist, copying the corresponding rows from the table to the file, etc.)*/
 void firstMacroPass(FILE *fp, struct Macro *head)
 {
     char line[MAX];
-    rewind(fp);
     memset(line, '\0', MAX); 
     while (fgets(line, MAX, fp))
     {
@@ -89,7 +88,7 @@ void firstMacroPass(FILE *fp, struct Macro *head)
     }
 }
 
-/*Copy the contents of the corresponding macro to the file from the table, if it is a macro command*/
+/*Copy the contents of the corresponding macro to the file from the list, if it is a macro command*/
 /* TODO: Maybe use fscanf instead a char at a time */
 int isMacroCall(char line[], FILE *fpw, struct Macro *head)
 {
