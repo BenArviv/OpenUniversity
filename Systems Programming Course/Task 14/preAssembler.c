@@ -9,7 +9,7 @@ void printMacroTable(struct Macro *head)
     temp = head->next;
     while (temp != NULL)
     {
-        printf("\nName: %s\nContent:\n%s", temp->mname, temp->mcontent);
+        printf("\nName: %s\nContent:\n%s\n", temp->mname, temp->mcontent);
         temp = temp->next;
     }
 }
@@ -34,8 +34,8 @@ int macroOperation(char line[])
         return END_MACRO;
     return NOT_MACRO;
 }
-
-void pushMacroName(struct Macro *temp, char line[]) /*Enter the macro name in the macros table*/
+/*Pushes macro name in to node*/
+void pushMacroName(struct Macro *temp, char line[]) 
 {
     int index = 0, nindex = 0;
     char name[MAX];
@@ -54,18 +54,16 @@ void pushMacroName(struct Macro *temp, char line[]) /*Enter the macro name in th
     }
     strcpy(temp->mname, name);
 }
-
-void pushMacroContent(struct Macro *temp, FILE *fp) /*Inserts the macro contents into the macros table*/
+/*Pushes the macro contents into macro node*/
+void pushMacroContent(struct Macro *temp, FILE *fp) 
 {
     char line[MAX];
     char content[MAX];
     memset(line, '\0', MAX);
     memset(content, '\0', MAX);
-    fgets(line, MAX, fp);
-    while (macroOperation(line) != END_MACRO && !feof(fp))
+    while (fgets(line, MAX, fp) != NULL && macroOperation(line) != END_MACRO )
     {
         strncat(content, line, MAX);
-        fgets(line, MAX, fp);
     }
     strcpy(temp->mcontent, content);
 }
@@ -88,7 +86,6 @@ void firstMacroPass(FILE *fp, struct Macro *head)
             head->next = temp;
             head = temp;
         }
-        puts("here");
     }
 }
 
