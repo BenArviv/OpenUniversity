@@ -23,6 +23,7 @@ As for the files x.as, y.as, hello.as we will run:
 >   assembler x y hello
 ```
 The assembler will generate output files with the same filenames and the following extensions:  
+- `.am` - Macro expansion file
 - `.ob` - Object file
 - `.ent` - Entries file
 - `.ext` - Externals file
