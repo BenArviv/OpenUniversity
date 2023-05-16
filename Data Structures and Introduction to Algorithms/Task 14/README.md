@@ -1,5 +1,5 @@
-<b>About the project:</b><br><br>
-This task compares the run-time comlplexity of different algorithms while finding the amount of different numbers in a given array. <br>
+## About the project
+This task compares the run-time complexity of different algorithms while finding the amount of different numbers in a given array. <br>
   A random array is generated with max number as set in <i>'UPPERBOUND'</i> and the size <i>N</i> as the user's input.<br><br>
   <b>The algorithms that are being tested are: <br></b>
   1. A unique algorithm that scans the array and creates a sub-array in the left part of the original array, containing the different numbers exist. <br>
